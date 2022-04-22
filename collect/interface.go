@@ -32,6 +32,9 @@ func GetStandardName() []string {
 
 type Standard interface {
 
+	// Name 名称
+	Name() string
+
 	// GetTag 获取标签列表
 	GetTag() []Tag
 

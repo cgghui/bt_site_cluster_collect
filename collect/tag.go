@@ -14,10 +14,10 @@ const (
 	TagCommerce Tag = 0  // 电商
 	TagMobile   Tag = 1  // 手机
 	TagCar      Tag = 2  // 汽车
-	TagSmart    Tag = 3  // 智能
-	TagIT       Tag = 4  // 互联网
-	TagTX       Tag = 5  // 通讯
-	TagLife     Tag = 6  // 生活
+	TagSmart    Tag = 3  // 智能 （包括：无人机 VR 机器人 人工智能）
+	TagIT       Tag = 4  // 互联网 (包括：百度 大数据 谷歌 阿里巴巴...)
+	TagTX       Tag = 5  // 通讯 (包括：手机 苹果 华为 小米...)
+	TagLife     Tag = 6  // 生活 (包括：电商 支付 直播 共享单车...)
 	TagSAB      Tag = 7  // 创业
 	TagScience  Tag = 8  // 科学
 	TagDigital  Tag = 9  // 数码

@@ -33,6 +33,10 @@ type CollectGo struct {
 	HomeURL string
 }
 
+func (c CollectGo) Name() string {
+	return Name
+}
+
 func (c CollectGo) GetTag() []collect.Tag {
 	r := make([]collect.Tag, 0)
 	for k := range Column {
