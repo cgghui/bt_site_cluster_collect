@@ -252,6 +252,9 @@ func AesDecryptECB(encrypted string) (decrypted []byte) {
 		if last = bytes.Index(decrypted, []byte{8}); last != -1 {
 			break
 		}
+		if last = bytes.Index(decrypted, []byte{9}); last != -1 {
+			break
+		}
 		cipher.Decrypt(decrypted[bs:be], dst[bs:be])
 	}
 	return decrypted[:last]
