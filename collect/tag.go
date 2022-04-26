@@ -11,17 +11,24 @@ import (
 type Tag uint8
 
 const (
-	TagCommerce Tag = 0  // 电商
-	TagMobile   Tag = 1  // 手机
-	TagCar      Tag = 2  // 汽车
-	TagSmart    Tag = 3  // 智能 （包括：无人机 VR 机器人 人工智能）
-	TagIT       Tag = 4  // 互联网 (包括：百度 大数据 谷歌 阿里巴巴...)
-	TagTX       Tag = 5  // 通讯 (包括：手机 苹果 华为 小米...)
-	TagLife     Tag = 6  // 生活 (包括：电商 支付 直播 共享单车...)
-	TagSAB      Tag = 7  // 创业
-	TagScience  Tag = 8  // 科学
-	TagDigital  Tag = 9  // 数码
-	TagFashion  Tag = 10 // 时尚
+	TagCommerce   Tag = 0  // 电商
+	TagMobile     Tag = 1  // 手机
+	TagCar        Tag = 2  // 汽车
+	TagSmart      Tag = 3  // 智能 （包括：无人机 VR 机器人 人工智能）
+	TagIT         Tag = 4  // IT (包括：百度 大数据 谷歌 阿里巴巴...)
+	TagTX         Tag = 5  // 通讯 (包括：手机 苹果 华为 小米...)
+	TagLife       Tag = 6  // 生活 (包括：电商 支付 直播 共享单车...)
+	TagSAB        Tag = 7  // 创业
+	TagScience    Tag = 8  // 科学
+	TagDigital    Tag = 9  // 数码
+	TagFashion    Tag = 10 // 时尚
+	TagInternet   Tag = 11 // 互联网
+	TagBlockChain Tag = 12 // 区块链
+	Tag5G         Tag = 13 // 5G
+	TagBaBy       Tag = 14 // 亲子
+	TagArt        Tag = 15 // 艺术
+	TagMobileTest Tag = 16 // 手机评测
+	TagTravel     Tag = 17 // 美食
 )
 
 const (

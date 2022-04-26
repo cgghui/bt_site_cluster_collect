@@ -63,8 +63,9 @@ func DownloadImage(imgURL string) (string, error) {
 	}
 	if strings.Contains(link.Host, ".ws.126.net") {
 		q := link.Query()
-		if q.Has("type") {
-			storePath = ImgRootPath + "/ws126net/" + cgghui.MD5(imgURL) + "." + q.Get("type")
+		if q.Has("url") {
+			imgTarget, _ := url.Parse(q.Get("url"))
+			storePath = ImgRootPath + "/" + strings.ReplaceAll(imgTarget.Host, ".", "_") + imgTarget.Path
 		}
 	}
 	if strings.Contains(link.Host, "inews.gtimg.com") {
@@ -85,12 +86,12 @@ func DownloadImage(imgURL string) (string, error) {
 		return "", ErrNotFile
 	}
 	if PathExists(storePath) {
-		return link.Path, nil
+		return strings.Replace(storePath, ImgRootPath, "", 1), nil
 	}
 	if err = Download(imgURL, storePath); err != nil {
 		return "", err
 	}
-	return link.Path, nil
+	return strings.Replace(storePath, ImgRootPath, "", 1), nil
 }
 
 func Download(target, storePath string) error {
